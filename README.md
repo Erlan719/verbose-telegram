@@ -1,1 +1,27 @@
-# verbose-telegram
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Live Stream</title>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <style>
+    body { margin: 0; background: black; }
+    video { width: 100vw; height: 100vh; }
+  </style>
+</head>
+<body>
+  <video id="video" controls autoplay></video>
+  <script>
+    const video = document.getElementById('video');
+    const videoSrc = 'http://op6ltzpi.ukminlt.org/iptv/R629AKZTULQEYPYRN2YQN62H/19221/index.m3u8';
+
+    if (Hls.isSupported()) {
+      const hls = new Hls();
+      hls.loadSource(videoSrc);
+      hls.attachMedia(video);
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+      video.src = videoSrc;
+    }
+  </script>
+</body>
+</html>
