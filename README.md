@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Live Stream</title>
-  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1.4.0"></script>
   <style>
     body { margin: 0; background: black; }
     video { width: 100vw; height: 100vh; }
